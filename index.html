@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterflies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Лови метеликів!</h1>
+    <div class="game-container">
+        <div class = "info">
+            <div class="scoreboard">
+                <p>Очки: <span id="score">0</span></p>
+                <p>Рівень: <span id="level">1</span></p>
+            </div>
+            <div class="controls">
+                <button class="button" id="start-btn">START</button> 
+                <button class="button" id="restart-btn">RESTART</button>
+            </div>
+        </div>
+        <div id="time-bar" class="time-bar">
+            <div id="time-bar-fill" class="time-bar-fill"></div> 
+            <span id="time-text">60 sec</span> 
+        </div>
+        <div id="game-field" class="game-field">
+            <div class = "cells">
+                <div id="field1" class = "game-cell"></div>
+                <div id="field2" class = "game-cell"></div>
+                <div id="field3" class = "game-cell"></div>
+                <div id="field4" class="game-cell"></div>
+                <div id="field5" class="game-cell"></div>
+                <div id="field6" class="game-cell"></div>
+                <div id="field7" class="game-cell"></div>
+                <div id="field8" class="game-cell"></div>
+                <div id="field9" class="game-cell"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

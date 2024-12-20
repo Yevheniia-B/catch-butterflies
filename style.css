@@ -1,0 +1,164 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* box-shadow: inset 0 0 10px rgba(237, 15, 15, 0.5); */
+        /* Внутрішня тінь */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-container {
+    margin: 20px auto;
+    position: relative;
+}
+
+.game-field {
+    height: 600px;
+    border: 1px solid #416749;
+    overflow: hidden; 
+    background-color: #4c7555;
+}
+.cells {
+    display: flex;
+    flex-wrap: wrap;
+}
+.game-cell {
+    position: relative;
+    width: 199px;
+    height: 199px;
+    background-image: url('./img/image-from-rawpixel-id-6201842-png.png');
+    background-size: cover;
+    animation: oscillate 2s infinite alternate;
+}
+
+@keyframes oscillate {
+    0% {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(-15deg);
+    }
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.button {
+    height: 23px;
+    width: 70px;
+    border: 1px solid #416749;
+    color: white;
+    background-color: #4c7555;
+}
+.time-bar {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid #416749;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    color: #416749;
+    font-size: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.time-bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #efca44;
+    height: 100%;
+    width: 100%;
+    transition: width 1s linear;
+}
+
+#time-text {
+    position: relative;
+    z-index: 1;
+}
+.scoreboard {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: left;
+}
+.controls {
+    margin-bottom: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+}
+.insect {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.butterfly-type1 {
+    background-image: url('./img/butterfly_avatar_by_lady_pixel_deqydr3.gif');
+}
+
+.butterfly-type2 {
+    background-image: url('./img/butterfly_gif_by_calikarcha13_d737wcw.gif');
+}
+
+.butterfly-type3 {
+    background-image: url('./img/butterfly_gif_by_ngochan192_ddapzle.gif');
+}
+
+.bee {
+    background-image: url('./img/bee-11531_256.gif');
+}
+
+/* flying score... */
+.score-fly {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    animation: flyUp 1s forwards;
+    z-index: 2;
+}
+
+@keyframes flyUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
